@@ -1,0 +1,17 @@
+.banner {
+    background-image: url('../../../../assets/images/StockChart.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 20;
+    /* background-color: rgb(245, 245, 245); */
+    /* background-o */
+}
+
+/* .banner-con {
+    background-image: url('../../../../assets/images/Snow.svg');
+    background-position: center;
+    background-size: cover;
+    background-clip: unset;
+    z-index: -2;
+} */

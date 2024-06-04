@@ -1,0 +1,14 @@
+.gradient-text {
+    background-image: linear-gradient(to right, #ffffff, #ddff00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* .menubg {
+    background-image: linear-gradient(to right, #ffffff, #ddff00);
+    background-image: url('../assets/images/menybg.svg');
+
+    background-position: center;
+    background-size: cover;
+
+} */

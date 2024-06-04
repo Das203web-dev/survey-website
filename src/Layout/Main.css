@@ -1,0 +1,5 @@
+.mainBg {
+    background-image: url("../assets/images/slanted-gradient.svg");
+    background-position: center;
+    background-size: cover;
+}

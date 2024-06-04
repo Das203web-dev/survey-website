@@ -1,0 +1,38 @@
+[
+    {
+        "tier": "Basic",
+        "pack": "Monthly",
+        "feature": "Affordable Pricing",
+        "description": "Get started with our Basic plan for a budget-friendly price, perfect for individuals and small teams looking to conduct surveys without breaking the bank."
+    },
+    {
+        "tier": "Basic",
+        "pack": "Yearly",
+        "feature": "Cost Savings with Annual Subscription",
+        "description": "Save more with our Basic plan's yearly subscription option. Enjoy the same features at a discounted rate when you opt for an annual subscription, providing even greater value for your investment."
+    },
+    {
+        "tier": "Pro",
+        "pack": "Monthly",
+        "feature": "Advanced Analytics Tools",
+        "description": "Upgrade to our Pro plan for access to advanced analytics tools. Dive deeper into your survey data with real-time analytics and customizable reports, allowing you to extract actionable insights to drive your business forward."
+    },
+    {
+        "tier": "Pro",
+        "pack": "Yearly",
+        "feature": "Personalized Support and Assistance",
+        "description": "Experience personalized support and assistance with our Pro plan's yearly subscription option. Receive dedicated support from our team, ensuring you get the help you need to maximize the value of our platform for your business."
+    },
+    {
+        "tier": "Enterprise",
+        "pack": "Monthly",
+        "feature": "Scalability and Flexibility",
+        "description": "Scale your survey operations effortlessly with our Enterprise plan. Handle large-scale surveys and accommodate extensive respondent lists without limitations, providing unmatched scalability and flexibility for your enterprise needs."
+    },
+    {
+        "tier": "Enterprise",
+        "pack": "Yearly",
+        "feature": "Custom Solutions and Tailored Support",
+        "description": "Unlock custom solutions and tailored support with our Enterprise plan's yearly subscription option. Work closely with our team to develop bespoke survey features and integrations, ensuring our platform meets the unique needs of your enterprise."
+    }
+]
