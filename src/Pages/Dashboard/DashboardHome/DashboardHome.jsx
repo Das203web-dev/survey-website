@@ -6,8 +6,8 @@ const DashboardHome = () => {
     const { user } = useContext(AuthContext)
     return (
         <div className='bg-white h-screen bg-opacity-5 text-center shadow rounded-lg shadow-slate-400 p-5'>
-            <h1 className='text-3xl'>
-                Welcome to Dashboard {user?.email}
+            <h1 className='md:text-3xl text-base'>
+                Welcome to Dashboard <span className='text-[#2f855a] text-wrap'>{user?.email}</span>
             </h1>
             <img className='' src={dashImg} alt="" />
         </div>

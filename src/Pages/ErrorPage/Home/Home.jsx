@@ -18,8 +18,8 @@ const Home = () => {
             </Helmet>
 
             <Banner></Banner>
-            <div className='space-y-20 p-5 w-3/4 mx-auto rounded-lg'>
-                <Test></Test>
+            <div className=' p-5 md:p-0 w-full md:w-3/4 mx-auto rounded-lg'>
+                {/* <Test></Test> */}
                 <Featured></Featured>
                 <Latest></Latest>
                 <Work></Work>

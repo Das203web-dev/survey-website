@@ -1,26 +1,48 @@
-import React from 'react';
+
+
+
+import { useEffect, useState } from 'react';
 import SectionTitle from '../../../../Shared/SectionTitle/SectionTitle';
-import vid1 from "../../../../assets/video/vid.mp4";
+import UseSurveyData from '@/Hooks/UseSurveyData';
+import UseAxiosPublic from '@/Hooks/UseAxiosPublic';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import SeeMoreBtn from '../SeeMoreBtn/SeeMoreBtn';
 
 const Featured = () => {
-    return (
-        <div className='my-20 relative h-[400px]'>
-            <SectionTitle title={"Featured Section"} />
-            <div className='relative h-full'>
-                {/* Video as background */}
-                <video className='absolute bottom-0 w-full h-[300px] blur-sm object-cover' src={vid1} autoPlay loop muted></video>
-                {/* Content */}
-                <div className='z-10 h-full relative bg-white bg-opacity-20 w-5/6'>
-                    <div className='bg-black gap-5 h-full bg-opacity-70 p-8 flex items-center'>
-                        <div className='w-full bg-blue-500 bg-opacity-20 h-[400px]'>
+    const [surveyData] = UseSurveyData();
+    const mostVotedSurvey = surveyData?.sort((a, b) => b.total_votes - a.total_votes);
 
-                        </div>
-                        <p className='text-white w-full'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, pariatur? Officiis laboriosam quis adipisci dolorem ipsa illum cum quae sunt! Mollitia architecto voluptatum maxime corporis laboriosam, labore excepturi alias minima soluta fugiat quod. Quae sit corrupti provident deleniti quasi et laboriosam blanditiis, nostrum, ratione quibusdam officia tempore totam culpa veniam!
-                        </p>
-                    </div>
-                </div>
+    return (
+        <div className='my-20 relative h-full'>
+            <SectionTitle title={"Featured Section"} />
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                {
+                    mostVotedSurvey.slice(0, 6).map(data => (
+                        <Card key={data._id} className="transition-shadow duration-500 shadow-md hover:shadow-2xl">
+                            <CardHeader className="card-header-custom">
+                                <CardTitle className="text-2xl">{data.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="card-content-custom">
+                                <div className="space-y-3">
+                                    <p className="text-lg font-medium text-gray-700">{data.description}</p>
+                                    <p className="text-md font-medium text-green-600">Vote: {data.total_votes}</p>
+                                    <p className="text-md font-medium text-gray-500">{data.category}</p>
+                                </div>
+                            </CardContent>
+                            <CardFooter className="card-footer-custom">
+                                <Button className="button-custom w-full transition-all">
+                                    <Link to={`/survey/${data._id}`}>Survey details</Link>
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                    ))
+                }
             </div>
+
+            <SeeMoreBtn></SeeMoreBtn>
+
         </div>
     );
 };

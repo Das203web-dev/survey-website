@@ -1,6 +1,18 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  font-family: "Merriweather", serif;
+  /* font-weight: 300; */
+  font-style: normal;
+
+}
 
 @layer base {
   :root {
@@ -76,6 +88,54 @@
   }
 }
 
+
+
+/* card styles property 
+ */
+/* Banner.css (or your main CSS file) */
+.card-custom {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header-custom {
+  color: black;
+  padding: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content-custom {
+  padding: 20px;
+}
+
+.card-footer-custom {
+  padding: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.button-custom {
+  background-color: #2ab16e;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-custom:hover {
+  background-color: #238d5c;
+}
+
+
+
+
 /* Hide scrollbar for WebKit-based browsers (Chrome, Safari, and Opera) */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -87,4 +147,166 @@
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+
+
+/* pro page banner sectiohn css  */
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* .title-shadow-lg {
+  text-shadow: 1px 2px 4px rgba(47, 39, 39, 0.7);
+} */
+
+
+
+.min-h-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .min-h-screen {
+    flex-direction: row;
+  }
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.bg-green-600 {
+  background-color: #2f855a;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.text-6xl {
+  font-size: 4rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.activeNavLink {
+  background-color: #2f855a;
+  color: white;
+}
+
+.inactiveNavLink {
+  color: #2d3748;
+}
+
+.activeNavLink .flex {
+  background-color: #2f855a;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.inactiveNavLink .flex {
+  color: #2d3748;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.activeNavLink .flex:hover,
+.inactiveNavLink .flex:hover {
+  background-color: #2f855a;
+  color: white;
+}
+
+.activeNavLink .flex svg,
+.inactiveNavLink .flex svg {
+  font-size: 1.25rem;
+}
+
+.text-wrap {
+  display: inline-block;
+  word-break: break-all;
+  white-space: normal;
+  max-width: 100%;
 }

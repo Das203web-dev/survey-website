@@ -5,7 +5,7 @@ import { Circle } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const RadioGroup = React.forwardRef(({ className, ...props }, ref) => {
-  return (<RadioGroupPrimitive.Root className={cn("bg-black w-full grid gap-1 p-1 rounded-lg", className)} {...props} ref={ref} />);
+  return (<RadioGroupPrimitive.Root className={cn("w-full grid gap-1 p-1 space-y-2 rounded-lg", className)} {...props} ref={ref} />);
 })
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName
 
@@ -19,7 +19,7 @@ const RadioGroupItem = React.forwardRef(({ className, ...props }, ref) => {
       )}
       {...props}>
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="h-full w-full fill-white text-current" />
+        <Circle className="h-full w-full fill-black text-current" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>)
   );

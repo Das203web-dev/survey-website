@@ -28,7 +28,7 @@ const Payment = () => {
 
     return (
         <div className='p-5 rounded-lg'>
-            <h1>This is payment page</h1>
+            {/* <h1>This is payment page</h1> */}
             <Elements stripe={stripePromise} options={option}>
                 <CheckOut></CheckOut>
             </Elements>

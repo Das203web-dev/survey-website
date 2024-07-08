@@ -11,9 +11,9 @@ const Main = () => {
     const { user } = useContext(AuthContext)
     return (
         <div className='m-0 p-0'>
-            <Navbar></Navbar>
             <TopBar></TopBar>
-            <div className=' bg-black text-black relative'>
+            <Navbar></Navbar>
+            <div className='text-[#212121] bg-[#fff] relative'>
                 {/* <Starfield
 
                     starCount={1000}
